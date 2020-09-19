@@ -1,10 +1,9 @@
 <template>
-        <article class="v-grid-lift" >
-            <div class="content" ref="content">
-                <slot/>
-                
-            </div>
-        </article>
+    <article class="v-grid-lift" >
+        <div class="content" ref="content">
+            <slot/>
+        </div>
+    </article>
 </template>
 
 <script>
@@ -16,7 +15,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
     mounted(){
         if (!process.isClient) return
+
         gsap.registerPlugin(ScrollTrigger);
+
         new ScrollTrigger({
             trigger : this.$el,
             toggleActions: "play none none none",
@@ -26,7 +27,6 @@ export default {
             once : true,
             onToggle: self =>  this.isVisible = true 
         })
-
 
         gsap.fromTo(this.$refs.content, {
                 y: '100%'
@@ -45,7 +45,6 @@ export default {
 
 
 <style lang="scss" >
-
 
 @keyframes appear1 {
   from {

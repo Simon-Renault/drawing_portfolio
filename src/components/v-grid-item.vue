@@ -67,7 +67,6 @@ export default {
 
     }
 }
-
 </script>
 
 
@@ -89,7 +88,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    border-radius: 3px;
+    border-radius: 2px;
     background: var(--light-grey);
     padding-bottom: 100%;
     opacity: 0;
@@ -161,9 +160,5 @@ export default {
         }
     }
 }
-
-
-
-
 
 </style>
