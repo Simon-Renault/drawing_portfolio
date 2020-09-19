@@ -1,6 +1,7 @@
 ---
-label: home page item
+label: Home page drawing tile
 hide_body: true
+display_field: select_a_drawing
 fields:
 - name: select_a_drawing
   type: select
