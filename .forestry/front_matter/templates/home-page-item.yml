@@ -1,5 +1,5 @@
 ---
-label: Home page drawing tile
+label: Home page Item tile
 hide_body: true
 display_field: select_a_drawing
 fields:
