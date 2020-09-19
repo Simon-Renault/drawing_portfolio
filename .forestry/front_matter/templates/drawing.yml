@@ -15,4 +15,5 @@ fields:
   config: {}
   label: Gallery
 pages:
+- drawings/drawing-2.md
 - drawings/test-1.md
