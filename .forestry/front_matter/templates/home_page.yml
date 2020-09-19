@@ -1,7 +1,6 @@
 ---
-label: home_page
+label: home page
 hide_body: true
-display_field: title
 fields:
 - name: hero_title
   type: text
