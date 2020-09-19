@@ -20,6 +20,16 @@
     {
       "template": "quote",
       "quote": "ssss"
+    },
+    {
+      "template": "drawing",
+      "title": "ssss",
+      "size": "horizontal",
+      "for_sale": true,
+      "gallery": [
+
+      ],
+      "shopify_referance": ""
     }
   ]
 }
