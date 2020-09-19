@@ -18,7 +18,7 @@ upload_dir: drawing_portfolio
 public_path: https://simonr.s3.eu-west-2.amazonaws.com/drawing_portfolio
 front_matter_path: ''
 use_front_matter_path: 
-file_template: ":filename:"
+file_template: 'https://simonr.s3.eu-west-2.amazonaws.com/drawing_portfolio/:filename:'
 build:
   preview_output_directory: dist
   install_dependencies_command: npm install
