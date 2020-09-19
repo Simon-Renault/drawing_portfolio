@@ -8,8 +8,8 @@ sections:
   path: config/home_config.json
   label: Home config
 - type: directory
-  path: drawings
-  label: Drawings
+  path: Items
+  label: Items
   create: all
   match: "**/*"
   templates:
