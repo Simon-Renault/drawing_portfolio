@@ -13,32 +13,14 @@ fields:
   config:
     maxSize: 64
   label: hero image
-- name: item
-  type: blocks
-  template_types:
-  - drawing
-  - quote
-  config:
-    min: 
-    max: 
-  label: Item
-  description: All the items presented in the home page gallery
-- name: items
-  type: list
-  config:
-    use_select: true
-    min: 
-    max: 
-    source:
-      type: pages
-      section: drawings
-  label: items
 - name: items_1
   type: blocks
-  label: items_1
-  template_types: []
+  template_types:
+  - quote
+  - drawing
   config:
     min: 
     max: 
+  label: items
 pages:
 - config/home_config.json
