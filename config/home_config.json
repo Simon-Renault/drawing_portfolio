@@ -10,6 +10,9 @@
   "hero_title": "Test",
   "hero_image": "https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg",
   "items": [
-
+    {
+      "template": "quote",
+      "quote": "A simple quote"
+    }
   ]
 }
