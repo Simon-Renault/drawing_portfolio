@@ -14,7 +14,7 @@ fields:
       section: drawings
       file: config/home_config.json
       path: gallery
-  label: select a drawing
+  label: Item reference
   description: select a drawing to include in the home page
 - name: size
   type: select
