@@ -1,8 +1,10 @@
 ---
-type: ''
-title: dddd
+type: drawing
+title: Drawing one
 for_sale: false
-gallery: []
+gallery:
+- https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg
+- https://simonr.s3.eu-west-2.amazonaws.com/coffe_high.jpg
 shopify_referance: ''
 
 ---
