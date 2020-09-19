@@ -1,4 +1,17 @@
 ---
 label: home page item
 hide_body: true
-fields: []
+fields:
+- name: select_a_drawing
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: select a drawing
+  description: select a drawing to include in the home page
