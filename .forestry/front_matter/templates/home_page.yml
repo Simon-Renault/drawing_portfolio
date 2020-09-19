@@ -1,4 +1,16 @@
 ---
 label: home_page
 hide_body: true
-fields: []
+fields:
+- name: test
+  type: blocks
+  label: test
+  template_types: []
+  config:
+    min: 
+    max: 
+- name: template
+  type: include
+  config: {}
+  template: drawing
+  label: template
