@@ -20,6 +20,10 @@
     {
       "template": "quote",
       "quote": "A nice quote"
+    },
+    {
+      "template": "home-page-item",
+      "select_a_drawing": ""
     }
   ]
 }
