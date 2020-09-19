@@ -6,7 +6,9 @@ fields:
 - name: test
   type: blocks
   label: test
-  template_types: []
+  template_types:
+  - home_page
+  - drawing
   config:
     min: 
     max: 
