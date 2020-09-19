@@ -1,6 +1,7 @@
 ---
-label: Quote
+label: Home page quote
 hide_body: true
+display_field: quote
 fields:
 - name: quote
   type: textarea
