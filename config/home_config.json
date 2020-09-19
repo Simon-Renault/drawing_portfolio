@@ -23,7 +23,7 @@
     },
     {
       "template": "home-page-item",
-      "select_a_drawing": "drawings/drawing-2.md",
+      "select_a_drawing": "Items/dddd.md",
       "size": "vertical"
     }
   ]
