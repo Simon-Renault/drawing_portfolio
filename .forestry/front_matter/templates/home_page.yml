@@ -16,7 +16,6 @@ fields:
 - name: item
   type: blocks
   template_types:
-  - home_page
   - drawing
   config:
     min: 
