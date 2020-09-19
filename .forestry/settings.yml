@@ -5,8 +5,9 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: document
-  path: e
-  label: eee
+  path: home_page
+  label: home_page
+  match: "**/*"
 - type: directory
   path: drawings
   label: Drawings
