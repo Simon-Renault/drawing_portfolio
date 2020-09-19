@@ -30,6 +30,11 @@ fields:
   type: image_gallery
   config: {}
   label: Gallery
+- name: shopify_referance
+  type: text
+  config:
+    required: false
+  label: shopify referance
 pages:
 - drawings/drawing-2.md
 - drawings/test-1.md
