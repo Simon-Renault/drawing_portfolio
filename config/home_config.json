@@ -1,3 +1,10 @@
 {
-    "title" : "test"
+  "title": "test",
+  "test": [
+
+  ],
+  "for_sale": false,
+  "gallery": [
+
+  ]
 }

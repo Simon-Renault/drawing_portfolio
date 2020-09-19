@@ -17,3 +17,5 @@ fields:
   config: {}
   template: drawing
   label: template
+pages:
+- config/home_config.json
