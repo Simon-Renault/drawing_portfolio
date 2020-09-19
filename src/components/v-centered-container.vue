@@ -11,7 +11,9 @@
 .centered-container{
     &__inner{
         margin: auto;
-        max-width: 1430px;
+        width:1430px;
+        max-width: 100vw;
+
         min-height: 20px;
         padding: 0 20px;
         @media screen and (min-width: 900px) {

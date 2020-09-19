@@ -70,6 +70,10 @@
     text-decoration: none;
   }
 
+  .layout{
+
+  }
+
   
   
 </style>
