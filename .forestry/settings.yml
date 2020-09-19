@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: document
   path: config/home_config.json
-  label: home
+  label: Home config
 - type: directory
   path: drawings
   label: Drawings
