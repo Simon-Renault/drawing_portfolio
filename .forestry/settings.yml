@@ -15,7 +15,7 @@ sections:
   templates:
   - drawing
 upload_dir: ''
-public_path: https://simonr.s3.eu-west-2.amazonaws.com/drawing_portfolio
+public_path: https://simonr.s3.eu-west-2.amazonaws.com
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
