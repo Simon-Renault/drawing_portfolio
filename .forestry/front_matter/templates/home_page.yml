@@ -15,3 +15,5 @@ fields:
   config: {}
   template: drawing
   label: template
+pages:
+- home_page/cccccccc.md
