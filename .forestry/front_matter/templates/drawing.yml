@@ -20,6 +20,18 @@ fields:
   config:
     required: false
   label: Shopify reference
-pages:
-- drawings/drawing-2.md
-- drawings/test-1.md
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - photo
+    - drawing
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
+  description: The type of the Item
