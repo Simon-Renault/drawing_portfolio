@@ -24,6 +24,7 @@ fields:
     options:
     - vertical
     - horizontal
+    - square
     source:
       type: simple
       section: 
