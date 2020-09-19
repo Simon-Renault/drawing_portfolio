@@ -17,6 +17,9 @@
     "drawings/drawing-2.md"
   ],
   "items_1": [
-
+    {
+      "template": "quote",
+      "quote": "A nice quote"
+    }
   ]
 }
