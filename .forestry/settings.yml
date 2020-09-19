@@ -14,7 +14,7 @@ sections:
   match: "**/*"
   templates:
   - drawing
-upload_dir: drawing_portfolio
+upload_dir: ''
 public_path: https://simonr.s3.eu-west-2.amazonaws.com/drawing_portfolio
 front_matter_path: ''
 use_front_matter_path: 
