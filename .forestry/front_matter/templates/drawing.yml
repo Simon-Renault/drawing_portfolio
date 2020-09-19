@@ -11,6 +11,21 @@ fields:
 - name: for_sale
   type: boolean
   label: For sale
+- name: size
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - vertical
+    - horizontal
+    - square
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Size
 - name: gallery
   type: image_gallery
   config: {}
