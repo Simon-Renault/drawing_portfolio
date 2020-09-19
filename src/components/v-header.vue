@@ -1,21 +1,25 @@
 <template>
     <header class="header" :class="type">
 
-      <g-link class="hero" to="/">
-        <div class="logo"></div>
-        <h1 class="title">Simon Renault</h1>
-      </g-link>
+      <div class="header__inner">
 
-      <div class="nav">
-        <nav>
-          <g-link class="link" to="/"><span>Home</span></g-link>
-          <g-link class="link" to="/drawing"><span>Drawing</span></g-link>
-          <g-link class="link" to="/photography"><span>Photography</span></g-link>
-          <g-link class="link" to="/shop"><span>Shop</span></g-link>
-          <g-link class="link" to="/about"><span>About</span></g-link>
-          <hr class="separator"/>
-          <v-cart-icon-link/>
-        </nav>
+        <g-link class="hero" to="/">
+          <div class="logo"></div>
+          <h1 class="title">Simon Renault</h1>
+        </g-link>
+
+        <div class="nav">
+          <nav>
+            <g-link class="link" to="/"><span>Home</span></g-link>
+            <g-link class="link" to="/drawing"><span>Drawing</span></g-link>
+            <g-link class="link" to="/photography"><span>Photography</span></g-link>
+            <g-link class="link" to="/shop"><span>Shop</span></g-link>
+            <g-link class="link" to="/about"><span>About</span></g-link>
+            <hr class="separator"/>
+            <v-cart-icon-link/>
+          </nav>
+        </div>
+
       </div>
 
     </header>
@@ -85,27 +89,39 @@ export default {
 
 <style lang="scss"  scoped>
 
-.header.row{
-  top:0;
-  position: sticky;
+.fixed{
+  position: fixed;
   background: white;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  max-width: 1430px;
-  padding: 40px 70px 10px;
-  margin: auto;
-  .hero{
-    padding:0;
-    margin-right:auto;
-    .title{
-      display: block;
-      font-size: 18px;
-      margin: 0 0 0 15px;
-      color: black;
+  width: 100vw;
+  left:0;
+  right:0;
+}
+
+.header{
+    top:0;
+    z-index: 2;
+    &__inner{
+      margin: auto;
+      display: flex;
+      align-items: center;
+      max-width: 1430px;
+      padding: 40px 70px 15px;
+    }
+    &.row{
+    .hero{
+      padding:0;
+      margin-right:auto;
+      .title{
+        display: block;
+        font-size: 18px;
+        margin: 0 0 0 15px;
+        color: black;
+      }
     }
   }
 }
+
+
 
 .title{
   display: none;

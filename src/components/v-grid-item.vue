@@ -1,9 +1,9 @@
 <template>
  
     <article class="v-grid-item hidden" :class="{'v2':v2,'l2':l2,'s2':s2}"  :style="{'animation-delay':delay+'ms'}" >
-        <div class="content">
-            <v-image-loader :shouldLoad="isVisible" :src="src"/>
-        </div>
+
+        <v-image-loader class="v-grid-item__img" :shouldLoad="isVisible" :src="src"/>
+
         <div class="hover-content">
             <div class="inner">
                 <span class="title">
@@ -19,12 +19,9 @@
 <script>
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import vImageLoader from '@/components/v-image-loader.vue'
+
 
 export default {
-    components: {
-      'v-image-loader': vImageLoader
-    },
     props : {
         v2 : {
             type : Boolean,
@@ -95,7 +92,7 @@ export default {
     &.visible{
        animation: appear .7s ease-out 0s 1 forwards ;
     }
-    .content{
+    & &__img{
         position: absolute;
         top:0;
         bottom:0;

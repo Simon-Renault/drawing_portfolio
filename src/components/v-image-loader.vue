@@ -59,7 +59,6 @@ export default {
     opacity: 0;
 }
 .box-image {
-    height: 100%;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -67,6 +66,7 @@ export default {
     position: relative;
 }
 .box-image img {
+    border-radius: 2px;
     top: 0;
     left: 0;
     bottom:0;
