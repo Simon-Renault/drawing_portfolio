@@ -1,4 +1,16 @@
 ---
 label: Drawing
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: for_sale
+  type: boolean
+  label: For sale
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery
