@@ -33,5 +33,12 @@ fields:
       type: pages
       section: drawings
   label: items
+- name: items_1
+  type: blocks
+  label: items_1
+  template_types: []
+  config:
+    min: 
+    max: 
 pages:
 - config/home_config.json
