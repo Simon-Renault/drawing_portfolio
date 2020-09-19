@@ -3,19 +3,15 @@ label: home_page
 hide_body: true
 display_field: title
 fields:
-- name: test
+- name: item
   type: blocks
-  label: test
   template_types:
   - home_page
   - drawing
   config:
     min: 
     max: 
-- name: template
-  type: include
-  config: {}
-  template: drawing
-  label: template
+  label: Item
+  description: All the items presented in the home page gallery
 pages:
 - config/home_config.json
