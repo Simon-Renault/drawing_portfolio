@@ -16,3 +16,17 @@ fields:
       path: gallery
   label: select a drawing
   description: select a drawing to include in the home page
+- name: size
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - vertical
+    - horizontal
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: size
