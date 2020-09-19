@@ -34,7 +34,7 @@ fields:
   type: text
   config:
     required: false
-  label: shopify referance
+  label: Shopify reference
 pages:
 - drawings/drawing-2.md
 - drawings/test-1.md
