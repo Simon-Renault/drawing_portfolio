@@ -17,7 +17,7 @@ fields:
   type: blocks
   template_types:
   - quote
-  - drawing
+  - home-page-item
   config:
     min: 
     max: 
