@@ -1,6 +1,7 @@
 ---
 label: home_page
 hide_body: true
+display_field: title
 fields:
 - name: test
   type: blocks

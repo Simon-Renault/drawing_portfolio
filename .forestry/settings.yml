@@ -7,7 +7,6 @@ sections:
 - type: document
   path: e
   label: eee
-  match: "**/*"
 - type: directory
   path: drawings
   label: Drawings
