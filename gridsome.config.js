@@ -8,6 +8,13 @@ module.exports = {
   titleTemplate: "%s - NWA",
   siteDescription: "Creative technologist",
   plugins: [
-    
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Item',
+        baseDir: './items',
+        path: '*.md'
+      }
+    }
   ]
 };

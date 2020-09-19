@@ -9,22 +9,7 @@
   ],
   "hero_title": "Test",
   "hero_image": "https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg",
-  "item": [
-
-  ],
   "items": [
-    "drawings/test-1.md",
-    "drawings/drawing-2.md"
-  ],
-  "items_1": [
-    {
-      "template": "quote",
-      "quote": "A nice quote"
-    },
-    {
-      "template": "home-page-item",
-      "select_a_drawing": "Items/dddd.md",
-      "size": "vertical"
-    }
+
   ]
 }

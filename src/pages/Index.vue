@@ -1,6 +1,6 @@
 <template>
   <Layout>
-
+    {{homeConfig.items}}
     <v-centered-container class="project-grid">
       <div class="grid">
         <v-grid-item src="./imgs/crazy_city.jpg" s2/>
@@ -54,10 +54,17 @@
   import vGridItem from '@/components/v-grid-item.vue'
   import vGridLift from '@/components/v-grid-lift.vue'
 
+  import homeConfig from '../../config/home_config.json'
+
   export default {
     components: {
       'v-grid-lift': vGridLift,
       'v-grid-item': vGridItem
+    },
+    data(){
+      return{
+        homeConfig
+      }
     }
   }
 </script>

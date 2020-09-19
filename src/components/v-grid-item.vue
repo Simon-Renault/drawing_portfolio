@@ -1,6 +1,6 @@
 <template>
  
-    <article class="v-grid-item hidden" :class="{'v2':v2,'l2':l2,'s2':s2}"  :style="{'animation-delay':delay+'ms'}" >
+    <g-link class="v-grid-item hidden"  to="/" :class="{'v2':v2,'l2':l2,'s2':s2}"  :style="{'animation-delay':delay+'ms'}" >
 
         <v-image-loader class="v-grid-item__img" :shouldLoad="isVisible" :src="src"/>
 
@@ -12,7 +12,7 @@
                 <span class="subtitle">Category</span>
             </div>
         </div>
-    </article>
+    </g-link>
         
 </template>
 
