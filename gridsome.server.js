@@ -23,7 +23,7 @@ module.exports = function (api) {
 
         for (const item of items) {
             if(item.template === "home-page-item"){
-                    const path = "/" + item.select_a_drawing.split("/")[1].split(".")[0] + "/"
+                    const path = "/" + item.item_referance.split("/")[1].split(".")[0] + "/"
                     const itemId = Items.find(item => item.path === path).id
                     console.log(itemId)
                     HomeItem.addNode({

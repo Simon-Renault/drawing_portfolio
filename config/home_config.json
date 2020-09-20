@@ -17,7 +17,7 @@
     {
       "template": "home-page-item",
       "size": "square",
-      "item_referance": ""
+      "item_referance": "Items/drawing-two.md"
     },
     {
       "template": "home-page-item",

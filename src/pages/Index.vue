@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    {{homeConfig.items}}
     <v-centered-container class="project-grid">
       <div class="grid">
         <v-grid-item src="./imgs/crazy_city.jpg" s2/>
