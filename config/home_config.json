@@ -7,7 +7,7 @@
   "gallery": [
 
   ],
-  "hero_title": "Test",
+  "hero_title": "Testd",
   "hero_image": "https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg",
   "items": [
     {
@@ -17,7 +17,8 @@
     {
       "template": "home-page-item",
       "select_a_drawing": "Items/dddd.md",
-      "size": "square"
+      "size": "square",
+      "item_referance": ""
     }
   ]
 }
