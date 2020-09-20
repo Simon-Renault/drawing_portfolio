@@ -16,7 +16,6 @@
     },
     {
       "template": "home-page-item",
-      "select_a_drawing": "Items/dddd.md",
       "size": "square",
       "item_referance": ""
     }
