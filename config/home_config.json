@@ -23,6 +23,11 @@
       "template": "home-page-item",
       "item_referance": "Items/dddd.md",
       "size": "horizontal"
+    },
+    {
+      "template": "home-page-item",
+      "item_referance": "Items/mechanical-beast.md",
+      "size": "classic"
     }
   ]
 }
