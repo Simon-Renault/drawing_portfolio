@@ -27,7 +27,7 @@
     {
       "template": "home-page-item",
       "item_referance": "Items/dddd.md",
-      "size": "horizontal"
+      "size": "classic"
     },
     {
       "template": "home-page-item",
