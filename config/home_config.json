@@ -18,6 +18,11 @@
       "template": "home-page-item",
       "size": "square",
       "item_referance": ""
+    },
+    {
+      "template": "home-page-item",
+      "item_referance": "Items/drawing-two.md",
+      "size": "horizontal"
     }
   ]
 }
