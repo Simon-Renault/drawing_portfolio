@@ -25,6 +25,7 @@ fields:
     - vertical
     - horizontal
     - square
+    - classic
     source:
       type: simple
       section: 

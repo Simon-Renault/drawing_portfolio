@@ -1,11 +1,9 @@
 ---
 type: drawing
-title: Drawing one
+title: Coffe shop
 for_sale: true
-gallery:
-- https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg
-- https://simonr.s3.eu-west-2.amazonaws.com/coffe_high.jpg
+gallery: []
 shopify_referance: ''
-cover_image: https://simonr.s3.eu-west-2.amazonaws.com/coffe_high.jpg
+cover_image: https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_full.jpg
 
 ---
