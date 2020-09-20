@@ -8,18 +8,26 @@ fields:
   config:
     required: true
   label: Title
+- name: cover_image
+  type: file
+  config:
+    maxSize: 64
+  label: Cover image
 - name: for_sale
   type: boolean
   label: For sale
-- name: gallery
-  type: image_gallery
-  config: {}
-  label: Gallery
 - name: shopify_referance
   type: text
   config:
     required: false
   label: Shopify reference
+  showOnly:
+    field: for_sale
+    value: true
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery
 - name: type
   type: select
   default: []
