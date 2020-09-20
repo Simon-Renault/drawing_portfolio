@@ -17,7 +17,7 @@
     },
     {
       "template": "home-page-item",
-      "size": "square",
+      "size": "vertical",
       "item_referance": "Items/drawing-two.md"
     },
     {
