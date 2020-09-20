@@ -3,7 +3,7 @@ label: Home page Item tile
 hide_body: true
 display_field: select_a_drawing
 fields:
-- name: select_a_drawing
+- name: item_referance
   type: select
   default: []
   config:
