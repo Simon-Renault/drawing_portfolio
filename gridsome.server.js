@@ -4,43 +4,57 @@ const homeConfig = require("./config/home_config.json")
 
 module.exports = function (api) {
     api.loadSource(async actions => {
-        console.log(actions)
         
-        const items = homeConfig.items
+        actions.addSchemaTypes(`
+            type Quote {
+                id: ID!
+                quote: String
+            }
+
+            type XItem {
+                id: ID!
+                title: String
+                text_content: String
+            }
+        `)
 
 
         actions.schema.createUnionType({
-            name: 'Content',
-            types: [ 'Quote' ]
+            name: 'Resource',
+            types: ['Quote', 'XItem'],
+            resolveType(obj) {
+              if (obj.__component === 'Quote') return 'Quote';
+              if (obj.__component === 'XItem') return 'XItem';
+            }
         })
 
 
-        const Items = actions.getCollection('Item').data() 
-
-        const HomeItem = actions.addCollection('HomeItem')
-        HomeItem.addReference('item', 'Item')
-       
-
-        for (const item of items) {
-            if(item.template === "home-page-item"){
-                    const path = "/" + item.item_referance.split("/")[1].split(".")[0] + "/"
-                    const itemId = Items.find(item => item.path === path).id
-                    console.log(itemId)
-                    HomeItem.addNode({
-                        ...item,
-                        item : itemId
-                    })
-            }
-            if(item.template === "quote"){
-                HomeItem.addNode({
-                    ...item
-                })
-            }
-        }
+        const collection = actions.addCollection({
+            typeName: 'Resource'
+        })
 
 
+        //-----only for testing-------//
 
+        collection.addNode({
+            __component : "Quote",
+            quote : "a simple quote" + Math.random() * 100
+        })
         
+        collection.addNode({
+            __component : "XItem",
+            title : "a simple title" + Math.random() * 100,
+            content : "lorem ipsum dolor sit amet"
+        })
+
+        collection.addNode({
+            __component : "Quote",
+            quote : "a simple quote" + Math.random() * 100
+        })
+
+        //-----only for testing-------//
+
+        console.log(collection.data())
 
     })
 }
