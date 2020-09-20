@@ -37,3 +37,4 @@ fields:
   description: The type of the Item
 pages:
 - Items/dddd.md
+- Items/drawing-two.md
