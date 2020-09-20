@@ -2,7 +2,23 @@
   <Layout>
     <v-centered-container class="project-grid">
       <div class="grid">
-        <v-grid-item src="./imgs/crazy_city.jpg" s2/>
+
+        <template v-for="item in $page.tiles.edges">
+
+          <v-grid-item  :key="item.node.id + 'item'" 
+                        v-if="item.node.type === 'item'" 
+                        :item="item.node" />
+
+          <v-grid-lift  :key="item.node.id + 'quote'" 
+                        v-if="item.node.type === 'quote'" >
+            <span> {{item.node.quote}}</span>
+          </v-grid-lift>
+
+        </template>
+
+
+
+        <!-- <v-grid-item src="./imgs/crazy_city.jpg" s2/>
         <v-grid-item src="./imgs/farm.jpg" />
         <v-grid-item src="./imgs/flying.jpg" v2/>
         <v-grid-lift>
@@ -40,13 +56,38 @@
         <v-grid-item src="./imgs/apartment.jpeg"  s2/>
         <v-grid-item src="./imgs/coffe_high.jpg"  v2/>
         <v-grid-item src="./imgs/bridge.jpg"  />
-        <v-grid-item src="./imgs/beast.jpg"  />
+        <v-grid-item src="./imgs/beast.jpg"  /> -->
       </div>
     </v-centered-container>
    
    
   </Layout>
 </template>
+
+
+<page-query>
+query Home {
+  	tiles : allHomeTiles{
+      edges{ 
+        node{
+          id
+          quote
+          size
+          type
+          item{
+            title
+            path
+            cover_image
+          }
+        }
+      }
+    }
+}
+
+</page-query>
+
+
+
 
 
 <script>

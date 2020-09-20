@@ -5,54 +5,49 @@ const homeConfig = require("./config/home_config.json")
 module.exports = function (api) {
     api.loadSource(async actions => {
         
-        actions.addSchemaTypes(`
-            type Quote {
-                id: ID!
-                quote: String
-            }
-
-            type XItem {
-                id: ID!
-                title: String
-                text_content: String
-            }
-        `)
-
-
-        actions.schema.createUnionType({
-            name: 'Resource',
-            types: ['Quote', 'XItem'],
-            resolveType(obj) {
-              if (obj.__component === 'Quote') return 'Quote';
-              if (obj.__component === 'XItem') return 'XItem';
-            }
-        })
-
+        
 
         const collection = actions.addCollection({
-            typeName: 'Resource'
+            typeName: 'HomeTiles'
+        })
+
+        collection.addReference('item', 'Item')
+
+        const Items = actions.getCollection("Item").data()
+
+        actions.schema.createUnionType({
+            name: 'HomeTiles',
+            types: [ 'Quote','Item' ]
         })
 
 
         //-----only for testing-------//
+        homeConfig.items.forEach((item,i)=>{
 
-        collection.addNode({
-            __component : "Quote",
-            quote : "a simple quote" + Math.random() * 100
-        })
-        
-        collection.addNode({
-            __component : "XItem",
-            title : "a simple title" + Math.random() * 100,
-            content : "lorem ipsum dolor sit amet"
-        })
+            console.log(item,i)
 
-        collection.addNode({
-            __component : "Quote",
-            quote : "a simple quote" + Math.random() * 100
-        })
+            let type
+            if(item.template === "quote"){
+                collection.addNode({
+                    ...item,
+                    type : "quote"
+                })
+            }
+            if(item.template === "home-page-item"){
+                const path = "/" + item.item_referance.split("/")[1].split(".")[0] + "/"
+                const itemId = Items.find(item => item.path === path).id
+                collection.addNode({
+                    ...item,
+                    item : itemId,
+                    type : "item"
+                })
+            }
+            
+            
 
+        })
         //-----only for testing-------//
+
 
         console.log(collection.data())
 
