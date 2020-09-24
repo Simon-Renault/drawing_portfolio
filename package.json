@@ -10,7 +10,7 @@
     "@gridsome/remark-prismjs": "0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.1",
-    "gridsome": "^0.7.20",
+    "gridsome": "^0.7.21",
     "gsap": "^3.5.1",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",

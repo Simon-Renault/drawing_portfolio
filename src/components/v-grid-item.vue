@@ -1,13 +1,13 @@
 <template>
  
-    <g-link class="v-grid-item hidden"  to="/" :class="item.size"  :style="{'animation-delay':delay+'ms'}" >
+    <g-link class="v-grid-item hidden"  to="/" :class="{'v2':v2,'l2':l2,'s2':s2}"  :style="{'animation-delay':delay+'ms'}" >
 
-        <v-image-loader class="v-grid-item__img" :shouldLoad="isVisible" :src="item.item.cover_image"/>
+        <v-image-loader class="v-grid-item__img" :shouldLoad="isVisible" :src="src"/>
 
         <div class="hover-content">
             <div class="inner">
                 <span class="title">
-                    {{item.item.title}}
+                    Drawing name
                 </span>
                 <span class="subtitle">Category</span>
             </div>
@@ -22,7 +22,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default {
-    props : ["item"],
+    props : {
+        v2 : {
+            type : Boolean,
+            default : false
+        },
+        src : {
+            type : String,
+            default :  'https://picsum.photos/1000/1000?grayscale&&random=' + Math.random()
+        },
+        l2 : {
+            type : Boolean,
+            default : false
+        },
+        s2 : {
+            type : Boolean,
+            default : false
+        }
+    },
     data(){
         return {
             isVisible : false,
@@ -120,19 +137,19 @@ export default {
             }
         }
     }
-    &.horizontal{
+    &.l2{
         padding-bottom: 50%;
         @media screen and (min-width: 900px) {
             grid-column : span 2;
         }
     }
-    &.vertical{
+    &.v2{
         padding-bottom: 200%;
         @media screen and (min-width: 900px) {
              grid-row : span 2;
         }
     }
-    &.square{
+    &.s2{
         padding-bottom: 100%;
         @media screen and (min-width: 900px) {
             grid-row : span 2;

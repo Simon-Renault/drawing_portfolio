@@ -1,55 +1,54 @@
+const homeResources = require( "./config/home_config.json")
 
-const homeConfig = require("./config/home_config.json")
+module.exports = (api) => {
+    api.loadSource((actions) => {
 
+        const ResourceType = actions.schema.createUnionType({
+            name: "Resource",
+            types: ["Quote", "Item"],
+            resolveType: (obj) => obj.component
+        });
+    
+        const QuoteType = actions.schema.createObjectType({
+            name: "Quote",
+            interfaces: ["Node"],
+            fields: {
+            id: "ID!",
+            quote: "String",
+            component: "String!"
+            }
+        });
+    
 
-module.exports = function (api) {
-    api.loadSource(async actions => {
-        
-        
-
-        const collection = actions.addCollection({
-            typeName: 'HomeTiles'
-        })
-
-        collection.addReference('item', 'Item')
-
+        actions.addSchemaTypes([ResourceType, QuoteType]);
+    
+        const pages = actions.addCollection("HomePage");
+        const quoteCollection = actions.addCollection("Quote");
         const Items = actions.getCollection("Item").data()
 
-        actions.schema.createUnionType({
-            name: 'HomeTiles',
-            types: [ 'Quote','Item' ]
+        let refs = [];
+
+        homeResources.items.map((item,index) => {
+                if(item.template === "quote"){
+                    const node = quoteCollection.addNode({
+                        quote : item.quote,
+                        component : "Quote"
+                    })
+                    refs.push(actions.createReference(node))
+                }
+                if(item.template === "home-page-item"){
+                    const path = '/' + item.item_referance.split('/')[1].split('.')[0] + '/'
+                    const Item = Items.find(i => i.path === path)
+                    refs.push({typeName: 'Item', id: Item.id})
+                }
         })
 
-
-        //-----only for testing-------//
-        homeConfig.items.forEach((item,i)=>{
-
-            console.log(item,i)
-
-            let type
-            if(item.template === "quote"){
-                collection.addNode({
-                    ...item,
-                    type : "quote"
-                })
-            }
-            if(item.template === "home-page-item"){
-                const path = "/" + item.item_referance.split("/")[1].split(".")[0] + "/"
-                const itemId = Items.find(item => item.path === path).id
-                collection.addNode({
-                    ...item,
-                    item : itemId,
-                    type : "item"
-                })
-            }
-            
-            
-
-        })
-        //-----only for testing-------//
+        pages.addNode({
+            name: "Home",
+            resources: refs
+        });
 
 
-        console.log(collection.data())
-
-    })
-}
+    });
+  };
+  
