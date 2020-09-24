@@ -11,18 +11,28 @@
   "hero_image": "https://simonr.s3.eu-west-2.amazonaws.com/coffe_shop_detail.jpg",
   "items": [
     {
+      "template": "home-page-item",
+      "item_referance": "Items/mechanical-beast.md",
+      "size": "classic"
+    },
+    {
+      "template": "home-page-item",
+      "size": "vertical",
+      "item_referance": "Items/drawing-two.md"
+    },
+    {
       "template": "quote",
       "quote": "A simple quote"
     },
     {
       "template": "home-page-item",
-      "size": "square",
-      "item_referance": "Items/drawing-two.md"
+      "item_referance": "Items/dddd.md",
+      "size": "classic"
     },
     {
       "template": "home-page-item",
-      "item_referance": "Items/dddd.md",
-      "size": "horizontal"
+      "item_referance": "Items/sky-city.md",
+      "size": "square"
     }
   ]
 }
