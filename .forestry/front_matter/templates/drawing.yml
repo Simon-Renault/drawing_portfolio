@@ -1,5 +1,5 @@
 ---
-label: Item
+label: Drawing
 hide_body: false
 display_field: title
 fields:
@@ -28,21 +28,6 @@ fields:
   type: image_gallery
   config: {}
   label: Gallery
-- name: type
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - photo
-    - drawing
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Type
-  description: The type of the Item
 pages:
 - Items/dddd.md
 - Items/drawing-two.md
