@@ -16,6 +16,11 @@ fields:
       path: gallery
   label: Item reference
   description: select a drawing to include in the home page
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
 - name: size
   type: select
   default: []
